@@ -12,3 +12,10 @@ brew services start mongodb-community@7.0
 ```
 brew services stop mongodb-community@7.0
 ```
+
+## To verify that MongoDB is running, perform one of the following:
+
+If you started MongoDB as a macOS service:
+```
+brew services list
+```
