@@ -23,4 +23,5 @@ Use customized color for diff colorization.
 ```
 git config --global color.diff.new blue
 git config --global color.diff.old black
+
 ```
