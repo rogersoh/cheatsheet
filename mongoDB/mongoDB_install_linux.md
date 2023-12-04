@@ -112,10 +112,10 @@ echo "mongodb-org-mongos hold" | sudo dpkg --set-selections
 echo "mongodb-org-tools hold" | sudo dpkg --set-selections
 ```
 
-Start MongoDB.
+# Start MongoDB.
 You can start the mongod process by issuing the following command:
 
-sudo systemctl start mongod
+```sudo systemctl start mongod```
 
 If you receive an error similar to the following when starting mongod:
 
@@ -127,19 +127,17 @@ sudo systemctl daemon-reload
 
 Then run the start command above again.
 
-2
-Verify that MongoDB has started successfully.
-sudo systemctl status mongod
+# Verify that MongoDB has started successfully.
+```sudo systemctl status mongod```
 
 You can optionally ensure that MongoDB will start following a system reboot by issuing the following command:
 
 sudo systemctl enable mongod
 
-3
-Stop MongoDB.
+# Stop MongoDB.
 As needed, you can stop the mongod process by issuing the following command:
 
-sudo systemctl stop mongod
+```sudo systemctl stop mongod```
 
 4
 Restart MongoDB.
