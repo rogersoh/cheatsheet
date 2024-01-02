@@ -39,13 +39,15 @@ forward, back to before char ```c tc , Tc```
 top, middle, bottom of screen ```H , M , L```  
 
 **Deleting text**  
+
 Almost all deletion commands are performed by typing ```d```  
 followed by a motion. For example ```dw``` deletes a word. A  
 few other deletions are:  
 character to right, left ```x , X```  
 to end of line ```D```  
 line ```dd```  
-line ```:d``` 
+line ```:d```  
+
 --------
 **Yanking text**  
 Like deletion, almost all yank commands are performed by
