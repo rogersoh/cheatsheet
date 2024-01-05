@@ -1,10 +1,10 @@
-# Error correction in the Atlas of the physilogy of pregnancy
+# Error correction in the Atlas of the physiology of pregnancy
 
 Jupyter file
 http://localhost:8888/notebooks/Preconception/clalit_pregnancy_090523_preconception.ipynb
 
 Error msg:  
-Passing a set as an indexer is not supported. Use a list instead.
+*Passing a set as an indexer is not supported. Use a list instead.*
 
 old code:
 ```
@@ -14,3 +14,5 @@ new code:
 ```
 tdf    = reg_res.loc[sorted(set(tests).intersection(metadata.loc[metadata.Group == groups[0]].index))].copy().sort_values(by='coeff')
 ```
+
+Pandas dataframe .loc[kvar] kvar cannot be a set, use a list instead.
