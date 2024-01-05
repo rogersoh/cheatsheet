@@ -73,7 +73,6 @@ for i,test in enumerate(ref_tests):
 initial plot setting
 ```
 init_printing()
-plt.style.use(['science', 'notebook'])
 plt.rc('axes', labelsize= 5.0)
 plt.rc('legend', title_fontsize = 8)
 plt.rc('legend', fontsize =6)
