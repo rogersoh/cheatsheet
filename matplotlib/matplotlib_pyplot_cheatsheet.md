@@ -48,3 +48,43 @@ Show Plot
 ```
 plt.show()
 ```
+
+## figure, axes label
+y label only on the left
+x label on the bottom of the axes
+
+metadata is a dataframe with "Nice name" as column
+```
+plt.figure(figsize=(8,30))
+for i,test in enumerate(ref_tests):
+  ax  = plt.subplot(int(np.ceil(len(tests)/4)),4,i+1)
+  .....
+  remove_top_right_frame([ax]) # remove the top and right side border
+  ax.set_title(metadata.loc[test]['Nice name'])
+  ax.set_xlabel('Fold change\n(Clalit)')
+  ax.set_ylabel('Fold change\n(Reference)')
+
+  if i<len(ref_tests)-4:
+    ax.set_xlabel('')
+  if np.mod(i,4) != 0:
+    ax.set_ylabel('')
+```
+
+initial plot setting
+```
+init_printing()
+plt.style.use(['science', 'notebook'])
+plt.rc('axes', labelsize= 5.0)
+plt.rc('legend', title_fontsize = 8)
+plt.rc('legend', fontsize =6)
+plt.rc('font', size=8) 
+plt.rc('xtick', labelsize=6) 
+plt.rc('ytick', labelsize=6) 
+plt.rc('axes', titlesize=8) 
+matplotlib.rcParams["figure.dpi"] = 100
+```
+
+list all rcParams dict
+```
+matplotlib.rcParams
+```
