@@ -138,3 +138,116 @@ toggle upper/lower case ~
 join lines J
 repeat last text-changing command .
 undo last change, all changes on line u , U
+
+# Note '/' means or 
+# ':command' are Ex commands whereas rest are key-presses.
+# Initially 'Press' be specfied but for rest of the commands it will be ommitted
+# so as to only initially make the reader comfortable.
+# Quit
+:q!
+# Write and quit
+:wq
+# Undo last change
+Press u
+
+
+# Set Line Numbers
+: set number
+#Remove Line Numbers
+:set no number
+
+
+
+#Change text inside () {} [] '' opening and closing braces
+Press ci(/{/[
+
+
+
+# Move to Start of the Line
+Press _
+# Move to End of the Line
+Press $
+
+# Move curosr Up/Down
+j/k
+# Move cursor 10 lines Up/Down
+10j/10k
+
+# Move curosr Left/Right
+h/l
+# Move cursor 10 char Left/Right
+10h/10l
+# Move curosr Left/Right
+h/l
+# Move cursor 10 char Left/Right
+10h/10l
+
+
+
+
+# Move to Start of File
+:1 
+#OR
+Press gg
+
+# Move to End of File
+:$ 
+#OR 
+Press G
+ 
+
+# Create a vertical/horizontal split of 2 files
+vim -o/O file1 file2
+# Create an empty horizontal/vertical split
+:split/vpslit -
+# Open an file in an empty split
+:edit PATH/file1
+# Split the same file horizontally/vertically
+:split/hsplit #OR
+CTRL + S / CTRL + V
+
+# Move between file splits 
+CTRL+W , → ↑←↓#and Direction or h/j/k/l
+# Increase or decrease Split Height
+CTRL +/-
+
+
+# Delete word
+:dw
+# Delete 2 words
+:d2w
+# Delete entire line
+:dd
+# Delete 3 lines
+:3dd
+# Delete till a character 'a'
+:dta
+# Delete from a character 'a'
+:dfa
+# Copy and paste
+y/p
+
+# Search 
+:/pattern
+#Search with highlighting
+/pattern
+
+
+# Open New Empty Tab in Vim
+:tabnew
+# Open Tab with given File
+:tabe PATH/file
+
+# Close a Tab
+:tabclose / CTRL +W , c
+
+# Switching between Tabs
+# Go to next tab
+: gt
+# Go to previous Tab.
+: gT
+# Switch to 1st/2nd/nth Tab.
+:tabn 1/2/3
+# Switch to First/Last Tab.
+:tabfirst/tablast
+
