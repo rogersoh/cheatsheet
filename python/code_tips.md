@@ -16,7 +16,7 @@ print(nameRoger)
 
 ```
 
-## Python sorted() Function
+# Python sorted() Function
 
 The sorted() function returns a sorted list of the specified iterable object.
 
@@ -43,6 +43,7 @@ Parameter Values
 |iterable	  |Required. The sequence to sort, list, dictionary, tuple etc.|
 |key  (Optional) |A Function to execute to decide the order. Default is None|
 |reverse	(Optional)| A Boolean. False will sort ascending, True will sort descending. Default is False|
+
 
 ### More Examples
 
