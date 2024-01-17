@@ -64,3 +64,9 @@ Sort descending:
 a = ("h", "b", "a", "c", "f", "d", "e", "g")
 x = sorted(a, reverse=True)
 ```
+
+## Create a new dictionary from an array list of dictionary with dict comprehension
+similar to list comprehension but for dictionary instead
+```
+new_dict = {item['key_name']:item["display_name"] for item in chartObj.baseUnits}
+```
