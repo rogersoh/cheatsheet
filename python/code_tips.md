@@ -70,3 +70,22 @@ similar to list comprehension but for dictionary instead
 ```
 new_dict = {item['key_name']:item["display_name"] for item in chartObj.baseUnits}
 ```
+
+8
+## format interger to string as this format 0001
+With python3 format and the new 3.6 formatted string literals f"":  
+```
+i = 5
+"{:4n}".format(i)
+```
+"   5"  
+
+```
+{:04n}".format(i)
+```
+'0005'  
+
+```
+f"{i:04n}" 
+```
+'0005'
