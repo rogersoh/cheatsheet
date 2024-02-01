@@ -89,3 +89,28 @@ i = 5
 f"{i:04n}" 
 ```
 '0005'
+
+## Using functions as objects
+refactor the function
+
+```
+# Concrete Strategies
+def bulk_order(price):
+  return price * 0.5
+
+def premium_user(price):
+  return price * 0.75
+
+# Strategy
+def determine_discount(context, price):
+  mappings = {'premium_user': premium_user,
+    'bulk_order': bulk_order}
+  
+  relevant_mappings = {k:v for k,v in mappings.items() if k in context}
+  return min(discount(price) for discount in relevant_mappings.values())
+
+  # Context + Run
+  prince = 1000
+  context = ['bulk_order', 'premium_user', 'female', 'USA']
+  print(f'Best discount: {determine_discount(context, price)}')
+```
