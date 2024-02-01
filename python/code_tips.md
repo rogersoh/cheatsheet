@@ -114,3 +114,31 @@ def determine_discount(context, price):
   context = ['bulk_order', 'premium_user', 'female', 'USA']
   print(f'Best discount: {determine_discount(context, price)}')
 ```
+
+## Functions as parameters
+
+We can send the function as a parameter too just as we  send arguments as parameter.
+
+```
+def add(x, y):
+  return x + y
+
+def sub(x, y):
+  return x-y
+
+def mul(x, y):
+  return x*y 
+
+# Here the operate parameter is receivingfunction objects
+def operations(operate, x, y): 
+  return operate(x, y)
+
+list_of_operations = [add, sub, mul]
+for op in list_of_operations:
+  print(operations(op, 10, 50))
+
+Output -
+60
+-40
+500
+```
