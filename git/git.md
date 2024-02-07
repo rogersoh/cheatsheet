@@ -14,6 +14,9 @@ git pull
 
 example *git checkout -b csv_file_reader_phase_2*
 
+# Remove a local branch
+```git branch --delete <branchname>```
+
 # Using Git to move a file to different folder
 ```
 git mv <filename> <new folder/>
