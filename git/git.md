@@ -10,9 +10,12 @@ git pull
 
 # Start a new branch  
 
-```git checkout -b new branch name```  
+```git checkout -b <new branch name>```  
 
 example *git checkout -b csv_file_reader_phase_2*
+
+## Start a new branch branching off an old branch
+```git checkout -b <new branch> <old branch> ```
 
 # Remove a local branch
 ```git branch --delete <branchname>```

@@ -69,7 +69,7 @@ x = sorted(a, reverse=True)
 similar to list comprehension but for dictionary instead
 ```
 new_dict = {item['key_name']:item["display_name"] for item in chartObj.baseUnits}
-```
+```cd
 
 8
 ## format interger to string as this format 0001
@@ -141,4 +141,14 @@ Output -
 60
 -40
 500
+```
+
+## Thread
+How to pass arguments to a thread
+```
+threading.Thread(target=test, args=(arg1,), kwargs={'arg2':arg2}).start()
+```
+or use lambda to pass the arguments
+```
+threading.Thread(target=lambda: test(arg1, arg2=arg2, arg3=arg3)).start()
 ```
